@@ -4,7 +4,7 @@
 
 代码将会**每天不定时**进行更新。
 
-其中，'duipai'文件夹供与AC程序进行对比。
+其中，`duipai`文件夹供与AC程序进行对比。
 参考教程：https://blog.csdn.net/C20180630/article/details/64444902
 
 ## English Version
