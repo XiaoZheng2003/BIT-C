@@ -1,9 +1,7 @@
 #include<stdio.h>
-#include<string.h>
 int main()
 {
 	int n,a[100][100],i,j,cnt=1;
-	memset(a,0,sizeof(a));
 	scanf("%d",&n);
 	for(i=1;i<=n;i++)
 		if(i%2)
