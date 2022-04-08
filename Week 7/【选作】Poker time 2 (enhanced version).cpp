@@ -1,16 +1,18 @@
 #include<stdio.h>
-int a[100],b[100];
-int trans1(char ch){
+#define Error {puts("Input Error!");return 0;}
+int a[70],b[70];
+const char color[5]="CDSH";
+const char ans[3][30]={"Draw!","Winner is A!","Winner is B!"};
+int trans1(char ch){	//ps:红桃 3>黑桃 2>方块 1>梅花 0，返回-1代表输入非法 
 	switch(ch){
 		case 'H':return 3;
 		case 'S':return 2;
 		case 'D':return 1;
-		case 'C':return 0; 
+		case 'C':return 0;
 	}
 	return -1;
 }
-//ps:红桃 3>黑桃 2>方块 1>梅花 0，返回-1代表输入非法 
-int trans2(char *p){
+int trans2(char *p){	//ps:2~10返回1~9，JQKA分别10~13，返回-1代表输入非法 
 	if(p[0]=='1'&&p[1]=='0')	return 9;
 	if(p[0]>'1'&&p[0]<='9')		return p[0]-'0'-1;
 	switch(p[0]){
@@ -21,16 +23,9 @@ int trans2(char *p){
 	}
 	return -1;
 }
-//ps:2~10返回1~9，JQKA分别10~13，返回-1代表输入非法 
 void print(int n)
 {
-	putchar(' ');
-	switch(n/14){
-		case 0:putchar('C');break;
-		case 1:putchar('D');break;
-		case 2:putchar('S');break;
-		case 3:putchar('H');break;
-	}
+	printf(" %c",color[n/14]);
 	n%=14;
 	if(n<10)	printf("%d",n+1);
 	switch(n){
@@ -40,7 +35,7 @@ void print(int n)
 		case 13:putchar('A');break;
 	}
 }
-int check(){
+int check(){	//返回值1A赢，2B赢，0平 
 	int aw,bw;
 	//同花顺 
 	for(int j=13;j>2;j--)
@@ -119,28 +114,23 @@ int check(){
 	}
 	return 0;
 }
-//返回值1A赢，2B赢，3平 
 int main()
 {
 	char t,tt[3],p;
-	for(int i=0;i<3;i++){
+	for(int i=0;i<6;i++){
 		do{t=getchar();}while(t==' '||t=='\n');scanf("%s",tt);
-		if(trans1(t)<0||trans2(tt)<0){puts("Input Error!");return 0;}
-		p=trans1(t)*14+trans2(tt); 
-		if(a[p]){puts("Input Error!");return 0;}
-		a[p]=1;
+		if(trans1(t)<0||trans2(tt)<0) Error;
+		p=trans1(t)*14+trans2(tt);
+		if(i<3){
+			if(a[p]) Error;
+			a[p]=1;
+		}
+		else{
+			if(b[p]) Error;
+			b[p]=1;
+		}
 	}
-	for(int i=0;i<3;i++){
-		do{t=getchar();}while(t==' '||t=='\n');scanf("%s",tt);
-		if(trans1(t)<0||trans2(tt)<0){puts("Input Error!");return 0;}
-		p=trans1(t)*14+trans2(tt); 
-		if(b[p]){puts("Input Error!");return 0;}
-		b[p]=1;
-	}
-	int res=check();
-	if(!res)	puts("Draw!");
-	else if(res==1)	puts("Winner is A!");
-	else	puts("Winner is B!");
+	puts(ans[check()]);
 	printf("A:");
 	for(int j=13;j;j--)
 		for(int i=3;i>=0;i--)
