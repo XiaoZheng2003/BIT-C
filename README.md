@@ -14,4 +14,4 @@ In this repository, there are correct codes of [Lexue **C Language programming**
 
 It will update **every day**.
 
-If there is any bugs in codes, you can feedback [here](https://gitee.com/XiaoZheng2003/lexue_code/issues).
+If there is any bug in codes, you can feedback [here](https://gitee.com/XiaoZheng2003/lexue_code/issues).
