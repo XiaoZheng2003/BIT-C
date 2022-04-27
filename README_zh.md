@@ -1,5 +1,8 @@
-# Lexue_code
-此仓库将会存放[乐学**C语言程序设计**练习](https://lexue.bit.edu.cn/course/view.php?id=10259)的AC代码。
+此仓库将会存放**C语言程序设计**练习的AC代码。
+
+**乐学**：https://lexue.bit.edu.cn/course/view.php?id=10259
+
+**中国大学MOOC**：https://www.icourse163.org/course/BIT-20019
 
 代码将会**不定时**进行更新。
 
