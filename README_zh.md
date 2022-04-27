@@ -1,4 +1,4 @@
-此仓库将会存放**C语言程序设计**练习的AC代码。
+此仓库将会存放**北京理工大学C语言程序设计**练习的AC代码。
 
 **乐学**：https://lexue.bit.edu.cn/course/view.php?id=10259
 

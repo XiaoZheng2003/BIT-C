@@ -1,4 +1,4 @@
-In this repository, there are correct codes of **C Language programming** exercise.
+In this repository, there are correct codes of **BIT C Language programming** exercise.
 
 **Lexue**：https://lexue.bit.edu.cn/course/view.php?id=10259
 
