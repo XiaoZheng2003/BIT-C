@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<string.h>
+#define V  puts("Valid")
+#define IV puts("Invalid")
 const int w[17]={7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2};
 const int v[11]={1,0,10,9,8,7,6,5,4,3,2};
 void update(char id[]){
@@ -38,16 +40,11 @@ int main()
 		else if(strlen(id)==18){
 			int t=calc(id);
 			if(t==10)
-				if(id[17]=='X')
-					puts("Valid");
-				else
-					puts("Invalid");
-			else if(id[17]==t+'0')
-				puts("Valid");
-			else
-				puts("Invalid");
+				if(id[17]=='X') V;
+				else IV;
+			else if(id[17]==t+'0') V;
+			else IV;
 		}
-		else
-			puts("Invalid");
+		else IV;
 	}
 }
