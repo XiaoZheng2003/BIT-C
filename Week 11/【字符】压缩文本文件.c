@@ -5,8 +5,8 @@ int cnt,flag;
 int IsLetter(char ch){return ch>='a'&&ch<='z'||ch>='A'&&ch<='Z';}
 int main()
 {
-	int ch;
-	char tmp[100]="\0",t=0;
+	int ch,t=0;
+	char tmp[100]="\0";
 	while(ch=getchar()){
 		if(ch==EOF)	break;
 		if(!IsLetter(ch)){
