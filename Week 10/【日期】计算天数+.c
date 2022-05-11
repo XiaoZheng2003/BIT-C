@@ -21,10 +21,8 @@ int main()
 {
 	int y1,m1,d1,y2,m2,d2,t;
 	scanf("%d%d%d%d%d%d",&y1,&m1,&d1,&y2,&m2,&d2);
-	if(y1<y2){
-		t=days(y1,12,31)-days(y1,m1,d1)+days(y2,m2,d2);
-		for(int i=y1+1;i<y2;i++)	t+=year_days(i);
-	}
-	else t=days(y2,m2,d2)-days(y1,m1,d1);
+	t=days(y2,m2,d2)-days(y1,m1,d1);
+	for(int i=y1;i<y2;i++)
+		t+=year_days(i);
 	printf("%d %s\n",t,t>1?"days":"day");
 }
