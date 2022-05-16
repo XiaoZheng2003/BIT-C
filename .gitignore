@@ -1,2 +1,6 @@
+# exe files
 *.exe
+
+# config files
 update.sh
+delete_exe.bat
