@@ -2,8 +2,9 @@
 #include<string.h>
 int c[30][30];
 int C(int n,int m){
-	if(!m||n==m)	return 1;
-	return c[n][m]?c[n][m]:(c[n][m]=C(n-1,m)+C(n-1,m-1));
+	if(c[n][m])		return c[n][m];
+	if(!m||n==m)	return c[n][m]=1;
+	return c[n][m]=C(n-1,m)+C(n-1,m-1);
 } 
 int main()
 {
