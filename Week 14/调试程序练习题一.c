@@ -18,7 +18,7 @@ int main()
     while(s[n]!='\0')
         n++;
     //reverse(s,0,n);
-    reverse(s,0,n-1);	//*传入的字符串应不含'\0'*
+    reverse(s,0,n-1);	//*传入的字符串应不含末位'\0'*
     puts(s);
     return 0;
 }
