@@ -23,17 +23,6 @@ void SetLink(NODE *h,int n){
 	}
 	return;
 }
-NODE *monenode(NODE *head,int m){
-	NODE *p,*q;
-	for(p=head;p->next!=NULL&&m;p=p->next,m--);
-	if(p->next!=NULL&&p!=head){
-		for(q=p->next;q->next!=NULL;q=q->next);
-		q->next=head->next;
-		head->next=p->next;
-		p->next=NULL;
-	}	
-	return head;
-}
 int main()
 {
 	int n,m;
@@ -50,4 +39,15 @@ int main()
 	}while(q->next!=NULL); 
 	printf("\n");
 	return 0;
+}
+NODE *monenode(NODE *head,int m){
+	NODE *p,*q;
+	for(p=head;p->next!=NULL&&m;p=p->next,m--);
+	if(p->next!=NULL&&p!=head){
+		for(q=p->next;q->next!=NULL;q=q->next);
+		q->next=head->next;
+		head->next=p->next;
+		p->next=NULL;
+	}	
+	return head;
 }
