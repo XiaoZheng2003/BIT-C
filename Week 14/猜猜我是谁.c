@@ -6,7 +6,7 @@ int main()
 	FILE *fp;
 	if((fp=fopen(filename,"r"))==NULL){
 		puts("File Name Error.");
-		return 0; 
+		return 0;
 	}
 	int line;
 	scanf("%d",&line);

@@ -4,3 +4,7 @@
 # config files
 update.sh
 delete_exe.bat
+
+# DO NOT upload lists
+unfinish/
+Exam/
