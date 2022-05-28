@@ -35,7 +35,9 @@ int main()
 	outputring(pring);
 	return 0;
 }
-#define T 10000 //T代表求小数点后10000位 
+#define T 10000
+/*T代表求小数点后的位数
+（如答案错误可尝试调大）*/
 int pt[T+5];
 void fun(int n,int m,int t){
 	for(int i=1;i<=t;i++){
