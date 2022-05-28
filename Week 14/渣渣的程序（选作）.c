@@ -9,7 +9,7 @@ int main()
 	char str[10000]="\0";
 	for(n=0;(str[n]=getchar())!=EOF;n++)
 		if(str[n]=='\n')	n--;
-	for(int i=0;i<n;i++){
+	for(int i=0;i<n;i++)
 		switch(str[i]){
 			case '>':
 				putchar(str[i]);putchar('\n');
@@ -38,5 +38,4 @@ int main()
 			default:
 				putchar(str[i]);
 		}
-	}
 }
