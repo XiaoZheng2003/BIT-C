@@ -15,7 +15,6 @@ int main()
 	for(int i=2012;i<y;i++)
 		p+=leap_year(i)?366:365;
 	int r=p/7/13%5,t=p%7;
-	//printf("r=%d t=%d p=%d\n",r,t,p);
 	if(!t||t>5)	puts("Free.");
 	else	printf("%d and %d.\n",rt[(t-r+4)%5][0],rt[(t-r+4)%5][1]);
 }
