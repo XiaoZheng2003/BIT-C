@@ -9,11 +9,11 @@ int judge(char ch){
 //数字0 大写字母1 小写字母2 其它符号3
 int main()
 {
-	int n,len;
+	int n;
 	char pwd[30];
 	scanf("%d ",&n);
 	while(n--){
-		gets(pwd);len=strlen(pwd);
+		gets(pwd);int len=strlen(pwd);
 		if(len<6){puts("Not Safe");continue;}
 		int type[4]={0,0,0,0};
 		for(int i=0;i<len;i++)

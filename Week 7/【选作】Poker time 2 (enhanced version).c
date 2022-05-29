@@ -116,11 +116,11 @@ int check(){	//∑µªÿ÷µ1A”Æ£¨2B”Æ£¨0∆Ω
 }
 int main()
 {
-	char t,tt[3],p;
+	char t,tt[3];
 	for(int i=0;i<6;i++){
 		do{t=getchar();}while(t==' '||t=='\n');scanf("%s",tt);
 		if(trans1(t)<0||trans2(tt)<0) Error;
-		p=trans1(t)*14+trans2(tt);
+		int p=trans1(t)*14+trans2(tt);
 		if(i<3){
 			if(a[p]) Error;
 			a[p]=1;

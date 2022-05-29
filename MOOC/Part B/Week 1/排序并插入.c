@@ -12,15 +12,15 @@ int main()
 				arr[i]=arr[j];
 				arr[j]=tmp;
 			}
-	int flag;
+	int t;
 	for(int i=1;i<n;i++)
 		if(arr[i]>p){
-			flag=i;
+			t=i;
 			break;
 		}
-	for(int i=n;i>flag;i--)
+	for(int i=n;i>t;i--)
 		arr[i]=arr[i-1];
-	arr[flag]=p;
+	arr[t]=p;
 	for(int i=1;i<n;i++)
 		printf("%d,",arr[i]);
 	printf("%d\n",arr[n]);

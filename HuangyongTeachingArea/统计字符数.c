@@ -1,10 +1,9 @@
 #include<stdio.h>
 int main()
 {
-	char t;
 	int ans=0;
 	while(1){
-		t=getchar();
+		char t=getchar();
 		if(t=='x'){
 			printf("%d\n",ans);
 			return 0;
