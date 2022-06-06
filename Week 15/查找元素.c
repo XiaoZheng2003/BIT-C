@@ -1,4 +1,4 @@
-//注释部分为前置代码 
+/*注释部分为前置代码*/
 /*
 #include<stdio.h>
 #include<stdlib.h>
