@@ -1,8 +1,10 @@
+**目前，2022春季C语言程序设计乐学及中国大学MOOC练习均已完成**（不含MOOC(下)期末考试）。
+
 此仓库将会存放**北京理工大学C语言程序设计**练习的AC代码。
 
 **乐学**：https://lexue.bit.edu.cn/course/view.php?id=10259
 
-**中国大学MOOC**：https://www.icourse163.org/course/BIT-20019
+**中国大学MOOC**：https://www.icourse163.org/course/BIT-20019 https://www.icourse163.org/course/BIT-46004
 
 代码将会**不定时**进行更新。
 
@@ -15,7 +17,7 @@ In this repository, there are correct codes of **BIT C Language programming** ex
 
 **Lexue**:https://lexue.bit.edu.cn/course/view.php?id=10259
 
-**MOOC**:https://www.icourse163.org/course/BIT-20019
+**MOOC**:https://www.icourse163.org/course/BIT-20019 https://www.icourse163.org/course/BIT-46004
 
 It will update **irregularly**.
 
