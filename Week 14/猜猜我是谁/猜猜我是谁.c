@@ -12,6 +12,7 @@ int main()
 	scanf("%d",&line);
 	if(line<1){
 		puts("Line No Error.");
+		fclose(fp);
 		return 0;
 	}
 	char str[105]="\0";
