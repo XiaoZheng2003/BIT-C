@@ -54,5 +54,6 @@ int main()
 			printf("%d\n",p[i].id);
 		}
 		if(t)	putchar('\n');
-	} 
+	}
+	fclose(fp); 
 }

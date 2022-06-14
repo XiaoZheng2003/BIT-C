@@ -18,7 +18,9 @@ int main()
 	for(int i=1;i<=line;i++)
 		if(fgets(str,100,fp)==NULL){
 			puts("Line No Error.");
+			fclose(fp);
 			return 0;
 		}
 	printf("%s",str);
+	fclose(fp);
 }
