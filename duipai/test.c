@@ -1,54 +1,76 @@
 #include<stdio.h>
 int main()
 {
-	int a,b,c,d,e,f,n;
-	char x;
-	scanf("%d/%d %c %d/%d",&a,&b,&x,&c,&d);
-	if(x==43)
-	{
-		e=a*d+b*c;
-		f=b*d;
-	}
-	else if(x==45)
-	{
-		e=a*d-b*c;
-		f=b*d;
-	}
-	else if(x==42)
-	{
-		e=a*c;
-		f=b*d;
-	}
-	else if(x==47)
-	{
-		e=a*d;
-		f=b*c;
-	}
-	n=2;
-	while(n<e||n<f)
-	{
-		if(e%n==0&&f%n==0)
-		{
-		e=e/n;
-		f=f/n;
-		}
-		else
-		n=n+1;
-	}
-	if(e==0)
-	printf("%d/%d %c %d/%d = 0\n",a,b,x,c,d);
-	else if(f>0)
-	{
-		if(f==1)
-		printf("%d/%d %c %d/%d = %d\n",a,b,x,c,d,e);
-		else
-		printf("%d/%d %c %d/%d = %d/%d\n",a,b,x,c,d,e,f);
-	}
-	else if(f<0)
-	{
-		if(f==-1)
-		printf("%d/%d %c %d/%d = %d\n",a,b,x,c,d,-e);
-		else
-		printf("%d/%d %c %d/%d = %d/%d\n",a,b,x,c,d,-e,-f);
-	}
+ int n,k,i,j,h,diji,s,sj,kong;
+ scanf("%d %d",&n,&k);
+ diji=1+4*(k-1)*n;
+ for(i=1;i<=n;i++)
+ {
+  s=1+4*(k-1)*(i-1);
+  for(j=1;j<=k;j++)
+  {
+   sj=s+4*(j-1);
+   if(j==1||j==k)
+   {
+    kong=(diji-sj)/2;
+    for(h=1;h<=kong;h++)
+    {
+     printf(" ");
+    }
+    for(h=1;h<=sj;h++)
+    {
+     printf("*");
+    }
+    for(h=1;h<=kong;h++)
+    {
+     printf(" ");
+    }
+    printf("\n");
+   }
+   if(j!=1&&j!=k)
+   {
+    kong=(diji-sj)/2;
+     for(h=1;h<=kong;h++)
+     {
+     printf(" ");
+     }
+     printf("*");
+     for(h=1;h<=(sj-2);h++)
+     {
+     printf(" ");}
+     printf("*");
+     for(h=1;h<=kong;h++)
+     {
+      printf(" ");
+     } 
+     printf("\n");
+   }
+  }
+  for(j=1;j<=k;j++)
+  {
+   s=1+4*(k-1)*(i-1);
+   sj=s+4*(k-2);
+   kong=(diji-sj)/2;
+     for(h=1;h<=kong;h++)
+     {
+     printf(" ");
+     }
+     printf("*");
+     for(h=1;h<=(sj-2);h++)
+     {
+     printf(" ");
+     }
+     printf("*");
+     for(h=1;h<=kong;h++)
+     {
+      printf(" ");
+     }
+     printf("\n");
+  }
+ }
+ for(i=1;i<=diji;i++)
+ {
+  printf("*");
+ }
+ printf("\n");
 }
