@@ -1,11 +1,10 @@
-#include<cstdio>
-#include<cstdlib>
-#include<ctime>
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 #include<windows.h>
-const char o[5]={'+','-','*','/'};
 int main()  
 {  
     srand(time(0));
-    printf("%d/%d %c %d/%d",rand()%100,rand()%100,o[rand()%4],rand()%100,rand()%100);
+    printf("%d %d\n",rand()%10+1,rand()%10+1);
     return 0;  
 } 

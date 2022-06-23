@@ -1,24 +1,43 @@
-#include<stdio.h>  
-int min(int a,int b){return a<b?a:b;}
-int abs(int a){return a>0?a:-a;}
-int main()  
-{  
-    int a1,a2,b1,b2,c1,c2;  
-    char op;  
-    scanf("%d/%d %c %d/%d",&a1,&a2,&op,&b1,&b2);  
-    switch(op){  
-        case '+':c1=a1*b2+a2*b1;c2=a2*b2;break;  
-        case '-':c1=a1*b2-a2*b1;c2=a2*b2;break;  
-        case '*':c1=a1*b1;c2=a2*b2;break;  
-        case '/':c1=a1*b2;c2=a2*b1;break;  
-    }  
-    int i,t=abs(min(c1,c2));  
-    for(i=t;i>1;)  
-        if(!(c1%i)&&!(c2%i)){  
-            c1/=i;c2/=i;  
-        }
-        else i--;
-    if(!c1){printf("%d/%d %c %d/%d = 0\n",a1,a2,op,b1,b2);return 0;}  
-    if(c2==1){printf("%d/%d %c %d/%d = %d\n",a1,a2,op,b1,b2,c1);return 0;}  
-    printf("%d/%d %c %d/%d = %d/%d\n",a1,a2,op,b1,b2,c1,c2);  
+#include<stdio.h>
+int n,k;
+int print(int t,int s){
+	int next;
+	for(int i=k-1;i>=0;i--){
+		for(int j=1;j<=i*2+s;j++)
+			putchar(' ');
+		if(i==k-1)
+			for(int j=1;j<=t;j++)
+				putchar('*');
+		else if(!i){
+			next=t+4*(k-1);
+			for(int j=1;j<=next;j++)
+				putchar('*');
+		}
+		else{
+			putchar('*');
+			for(int j=1;j<=t+4*(k-1-i)-2;j++)
+				putchar(' ');
+			putchar('*');
+		}
+		putchar('\n');
+	}
+	for(int i=1;i<=k;i++){
+		for(int j=1;j<=s;j++)
+			putchar(' ');
+		printf("  *");
+		for(int j=1;j<=next-6;j++)
+			putchar(' ');
+		printf("*\n");
+	}
+	return next;
+}
+int main()
+{
+	scanf("%d%d",&n,&k);
+	int p=1;
+	for(int i=1;i<=n;i++)
+		p=print(p,2*(k-1)*(n-i));
+	for(int i=1;i<=p;i++)
+		putchar('*');
+	putchar('\n');
 }
